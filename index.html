@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="siteTitle">Conversor de temperatura</h1>
+    </header>
+    <nav>
+        <label for="">Tema:</label>
+        <input type="radio" name="tema" id="claro" checked>
+        <label for="claro">Claro</label>
+        <input type="radio" name="tema" id="escuro">
+        <label for="escuro">Escuro</label>
+    </nav>
+    <section>
+        <div class="escalas">
+            <div class="escala-escolha">
+                <label for="escala1">Escala: </label>
+                <select name="escala1" id="primEsc">
+                    <option value="Celsius">Celsius (C)</option>
+                    <option value="Fahrenheit">Fahrenheit (F)</option>
+                    <option value="Kelvin">Kelvin (K)</option>
+                </select>
+            </div>
+            <div class="escala-escolha">
+                <label for="escala2">Converter em: </label>
+                <select name="escala2" id="secEsc">
+                    <option value="Fahrenheit">Fahrenheit (F)</option>
+                    <option value="Celsius">Celsius (C)</option>
+                    <option value="Kelvin">Kelvin (K)</option>
+                </select>
+            </div>
+        </div>
+        <div class="valor">
+            <label for="valor">Valor: </label>
+            <input type="text" name="valor" id="valor">
+            <input type="button" value="verificar" id="botao" onclick="verificar()">
+        </div>
+        <div class="resposta"></div>
+    </section>
+    <footer>
+        &copy; Everton Matias
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
