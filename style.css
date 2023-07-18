@@ -3,7 +3,7 @@ body {
   font-size: 1.1rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin: auto;
+  margin: 1em;
 }
 
 body.darkModeAtivado {
@@ -23,10 +23,10 @@ header {
 }
 
 input[type="radio"] {
-  height: 15px;
+  height: 20px;
 }
 
-nav {
+.theme {
   display: flex;
   justify-content: center;
   padding: 2em;
@@ -43,14 +43,14 @@ section {
   font-weight: 50;
 }
 
-.escalas {
+.escalasDeTemperatura {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 4em;
   border-style: none;
 }
 
-.escala-escolha {
+.escalaEscolha {
   display: flex;
   flex: 1 0 140px;
 }
