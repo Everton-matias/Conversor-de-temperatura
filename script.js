@@ -1,24 +1,24 @@
-var temaEscuro = document.querySelector("input#escuro");
-var temaClaro = document.querySelector("input#claro");
+const temaEscuro = document.querySelector("input#escuro");
+const temaClaro = document.querySelector("input#claro");
 temaEscuro.addEventListener("click", () => {
   document.body.classList.add("darkModeAtivado");
 });
-
 temaClaro.addEventListener("click", () => {
   document.body.classList.remove("darkModeAtivado");
 });
 
 function verificar() {
-  var resposta = document.querySelector(".resposta");
-  let escalaInicial = document.querySelector("#primEsc");
-  let escalaTransform = document.querySelector("#secEsc");
-  var valorInicial = document.querySelector("#valor");
-  var valor = Number(valorInicial.value);
-  var valorEscInicial =
+  let resposta, escalaInicial, escalaTransform, valorInicial, valorFinal;
+  resposta = document.querySelector(".resposta");
+  escalaInicial = document.querySelector("#primEsc");
+  escalaTransform = document.querySelector("#secEsc");
+  valorInicial = document.querySelector("#valor");
+  valor = Number(valorInicial.value);
+  valorFinal = "";
+  const valorEscInicial =
     escalaInicial.options[escalaInicial.selectedIndex].value;
-  var valorEscTransform =
+  const valorEscTransform =
     escalaTransform.options[escalaTransform.selectedIndex].value;
-  let valorFinal = "";
   if (valorEscInicial == "Celsius") {
     if (valorEscTransform == "Celsius") {
       resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente transformar em outra.`;
