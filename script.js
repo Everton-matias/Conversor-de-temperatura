@@ -1,9 +1,13 @@
-const temaEscuro = document.querySelector("input#escuro");
-const temaClaro = document.querySelector("input#claro");
-temaEscuro.addEventListener("click", () => {
+const backgroundThemes = [
+  { lightTheme: document.querySelector("input#claro") },
+  { darkTheme: document.querySelector("input#escuro") },
+];
+// const temaEscuro = document.querySelector("input#escuro");
+// const temaClaro = document.querySelector("input#claro");
+backgroundThemes[1].darkTheme.addEventListener("click", () => {
   document.body.classList.add("darkModeAtivado");
 });
-temaClaro.addEventListener("click", () => {
+backgroundThemes[0].lightTheme.addEventListener("click", () => {
   document.body.classList.remove("darkModeAtivado");
 });
 
