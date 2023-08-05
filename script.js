@@ -26,11 +26,13 @@ function verificar() {
     if (valorEscTransform == "Celsius") {
       resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente usar outra temperatura.`;
       resposta.style.color = "red";
-    } else if (valorEscTransform == "Fahrenheit") {
+    }
+    if (valorEscTransform == "Fahrenheit") {
       valorFinal = (valor * 9) / 5 + 32;
       resposta.innerHTML = valorFinal;
       return (resposta.style.color = "");
-    } else if (valorEscTransform == "Kelvin") {
+    }
+    if (valorEscTransform == "Kelvin") {
       valorFinal = valor + 273.15;
       resposta.innerHTML = valorFinal;
       return (resposta.style.color = "");
@@ -40,10 +42,12 @@ function verificar() {
     if (valorEscTransform == "Celsius") {
       valorFinal = ((valor - 32) * 5) / 9;
       resposta.innerHTML = valorFinal;
-    } else if (valorEscTransform == "Fahrenheit") {
+    }
+    if (valorEscTransform == "Fahrenheit") {
       resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente transformar em outra.`;
       resposta.style.color = "red";
-    } else if (valorEscTransform == "Kelvin") {
+    }
+    if (valorEscTransform == "Kelvin") {
       valorFinal = ((valor - 32) * 5) / 9 + 273.15;
       resposta.innerHTML = valorFinal;
       return (resposta.style.color = "");
@@ -54,11 +58,13 @@ function verificar() {
       valorFinal = valor - 273.15;
       resposta.innerHTML = valorFinal;
       return (resposta.style.color = "");
-    } else if (valorEscTransform == "Fahrenheit") {
+    }
+    if (valorEscTransform == "Fahrenheit") {
       valorFinal = ((valor - 273.15) * 9) / 5 + 32;
       resposta.innerHTML = valorFinal;
       return (resposta.style.color = "");
-    } else if (valorEscTransform == "Kelvin") {
+    }
+    if (valorEscTransform == "Kelvin") {
       resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente transformar em outra.`;
       resposta.style.color = "red";
     }
