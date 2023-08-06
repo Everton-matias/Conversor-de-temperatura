@@ -22,51 +22,37 @@ function verificar() {
     escalaInicial.options[escalaInicial.selectedIndex].value;
   const valorEscTransform =
     escalaTransform.options[escalaTransform.selectedIndex].value;
-  if (valorEscInicial == "Celsius") {
-    if (valorEscTransform == "Celsius") {
-      resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente usar outra temperatura.`;
-      resposta.style.color = "red";
+  asd =
+    valorEscInicial == valorEscTransform
+      ? ((resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente transformar em outra.`),
+        (resposta.style.color = "red"))
+      : conta();
+
+  function conta() {
+    if (valorEscInicial == "Celsius") {
+      if (valorEscTransform == "Fahrenheit") {
+        valorFinal = (valor * 9) / 5 + 32;
+      }
+      if (valorEscTransform == "Kelvin") {
+        valorFinal = valor + 273.15;
+      }
     }
-    if (valorEscTransform == "Fahrenheit") {
-      valorFinal = (valor * 9) / 5 + 32;
-      resposta.innerHTML = valorFinal;
-      return (resposta.style.color = "");
+    if (valorEscInicial == "Fahrenheit") {
+      if (valorEscTransform == "Celsius") {
+        valorFinal = ((valor - 32) * 5) / 9;
+      }
+      if (valorEscTransform == "Kelvin") {
+        valorFinal = ((valor - 32) * 5) / 9 + 273.15;
+      }
     }
-    if (valorEscTransform == "Kelvin") {
-      valorFinal = valor + 273.15;
-      resposta.innerHTML = valorFinal;
-      return (resposta.style.color = "");
+    if (valorEscInicial == "Kelvin") {
+      if (valorEscTransform == "Celsius") {
+        valorFinal = valor - 273.15;
+      }
+      if (valorEscTransform == "Fahrenheit") {
+        valorFinal = ((valor - 273.15) * 9) / 5 + 32;
+      }
     }
-  }
-  if (valorEscInicial == "Fahrenheit") {
-    if (valorEscTransform == "Celsius") {
-      valorFinal = ((valor - 32) * 5) / 9;
-      resposta.innerHTML = valorFinal;
-    }
-    if (valorEscTransform == "Fahrenheit") {
-      resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente transformar em outra.`;
-      resposta.style.color = "red";
-    }
-    if (valorEscTransform == "Kelvin") {
-      valorFinal = ((valor - 32) * 5) / 9 + 273.15;
-      resposta.innerHTML = valorFinal;
-      return (resposta.style.color = "");
-    }
-  }
-  if (valorEscInicial == "Kelvin") {
-    if (valorEscTransform == "Celsius") {
-      valorFinal = valor - 273.15;
-      resposta.innerHTML = valorFinal;
-      return (resposta.style.color = "");
-    }
-    if (valorEscTransform == "Fahrenheit") {
-      valorFinal = ((valor - 273.15) * 9) / 5 + 32;
-      resposta.innerHTML = valorFinal;
-      return (resposta.style.color = "");
-    }
-    if (valorEscTransform == "Kelvin") {
-      resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente transformar em outra.`;
-      resposta.style.color = "red";
-    }
+    return (resposta.innerHTML = valorFinal), (resposta.style.color = "");
   }
 }
