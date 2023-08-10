@@ -22,7 +22,7 @@ function verificar() {
     escalaInicial.options[escalaInicial.selectedIndex].value;
   const valorEscTransform =
     escalaTransform.options[escalaTransform.selectedIndex].value;
-  asd =
+  peneiraDeMesmasEscalasDeTemperatura =
     valorEscInicial == valorEscTransform
       ? ((resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente transformar em outra.`),
         (resposta.style.color = "red"))
