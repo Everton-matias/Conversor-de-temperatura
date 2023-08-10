@@ -26,9 +26,9 @@ function verificar() {
     valorEscInicial == valorEscTransform
       ? ((resposta.innerHTML = `A temperatura já está em <strong>${valorEscInicial}</strong>, tente transformar em outra.`),
         (resposta.style.color = "red"))
-      : conta();
+      : conversao();
 
-  function conta() {
+  function conversao() {
     if (valorEscInicial == "Celsius") {
       if (valorEscTransform == "Fahrenheit") {
         valorFinal = (valor * 9) / 5 + 32;
