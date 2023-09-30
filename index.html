@@ -2,55 +2,73 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Conversor de Temperatura</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Conversor de Temperatura</title>
 
 </head>
 
-<body>
-    <header>
-        <h1 class="siteTitle">Conversor de temperatura</h1>
-    </header>
-    <div class="theme">
-        <label for="">Tema:</label>
-        <input type="radio" name="tema" id="claro" checked>
-        <label for="claro">Claro</label>
-        <input type="radio" name="tema" id="escuro">
-        <label for="escuro">Escuro</label>
+<body id="body">
+  <header>
+
+    <div></div>
+
+    <div class="siteTitle">
+      <h1 class="">Conversor de temperatura</h1>
     </div>
-    <section>
-        <div class="escalasDeTemperatura">
-            <div class="escalaEscolha">
-                <label for="escalaDeTemperatura1">Escala: </label>
-                <select name="escalaDeTemperatura1" id="primEsc">
-                    <option value="Celsius">Celsius (C)</option>
-                    <option value="Fahrenheit">Fahrenheit (F)</option>
-                    <option value="Kelvin">Kelvin (K)</option>
-                </select>
-            </div>
-            <div class="escalaEscolha">
-                <label for="escalaDeTemperatura2">Converter em: </label>
-                <select name="escalaDeTemperatura2" id="secEsc">
-                    <option value="Fahrenheit">Fahrenheit (F)</option>
-                    <option value="Celsius">Celsius (C)</option>
-                    <option value="Kelvin">Kelvin (K)</option>
-                </select>
-            </div>
-        </div>
-        <div class="valor">
-            <label for="valor">Valor: </label>
-            <input type="text" name="valor" id="valor">
-            <input type="button" value="verificar" id="botao" onclick="verificar()">
-        </div>
-        <div class="resposta"></div>
-    </section>
-    <footer>
-        &copy; Everton Matias
-    </footer>
-    <script src="script.js"></script>
+
+    <div class="theme">
+      <p id="light"><i class="fa-regular fa-sun"></i></p>
+      <p id="dark"><i class="fa-regular fa-moon"></i></p>
+    </div>
+  </header>
+
+  <section>
+
+    <div class="choiseLabel">
+      <p class="choiseLabelP">
+        Escolha as escalas:
+      </p>
+    </div>
+
+    <div class="escalasDeTemperatura">
+      <div class="escalaEscolha">
+        <select name="escalaDeTemperatura1" id="primEsc">
+          <option value="Celsius">Celsius (C)</option>
+          <option value="Fahrenheit">Fahrenheit (F)</option>
+          <option value="Kelvin">Kelvin (K)</option>
+        </select>
+      </div>
+
+      <div class="escalaEscolha">
+        <select name="escalaDeTemperatura2" id="secEsc">
+          <option value="Fahrenheit">Fahrenheit (F)</option>
+          <option value="Celsius">Celsius (C)</option>
+          <option value="Kelvin">Kelvin (K)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="valor">
+      <label for="valor" class="valueLabel">Valor: </label>
+      <input type="text" name="valor" id="valor" placeholder="0">
+      <input type="button" value="verificar" id="calculateButon">
+    </div>
+
+    <div class="resposta"></div>
+
+  </section>
+
+  <footer>
+    <p class="footer">&copy; Everton Matias</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>
