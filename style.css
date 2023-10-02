@@ -14,7 +14,7 @@ body.darkModeAtivado {
 body.darkModeAtivado section {
   background-color: #555555;
   box-shadow: 0.5em 0.5em 0.7em rgb(106, 106, 106);
-  font-weight: 900;
+  /* font-weight: 700; */
 }
 
 header {
@@ -72,11 +72,6 @@ section {
   gap: 20px;
 }
 
-.escalaEscolha {
-  /* display: flex;
-  flex: 1 0 1em; */
-}
-
 select {
   font-size: 1.1rem;
   font-weight: 500;
@@ -132,7 +127,7 @@ select {
 }
 
 .resposta.darkModeAtivado {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 footer {

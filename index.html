@@ -13,29 +13,23 @@
 
 </head>
 
-<body id="body">
+<body class="darkModeAtivado" id="body">
   <header>
-
     <div></div>
-
     <div class="siteTitle">
       <h1 class="">Conversor de temperatura</h1>
     </div>
-
     <div class="theme">
       <p id="light"><i class="fa-regular fa-sun"></i></p>
       <p id="dark"><i class="fa-regular fa-moon"></i></p>
     </div>
   </header>
-
   <section>
-
     <div class="choiseLabel">
       <p class="choiseLabelP">
         Escolha as escalas:
       </p>
     </div>
-
     <div class="escalasDeTemperatura">
       <div class="escalaEscolha">
         <select name="escalaDeTemperatura1" id="primEsc">
@@ -44,7 +38,6 @@
           <option value="Kelvin">Kelvin (K)</option>
         </select>
       </div>
-
       <div class="escalaEscolha">
         <select name="escalaDeTemperatura2" id="secEsc">
           <option value="Fahrenheit">Fahrenheit (F)</option>
@@ -53,21 +46,16 @@
         </select>
       </div>
     </div>
-
     <div class="valor">
       <label for="valor" class="valueLabel">Valor: </label>
       <input type="text" name="valor" id="valor" placeholder="0">
       <input type="button" value="verificar" id="calculateButon">
     </div>
-
     <div class="resposta"></div>
-
   </section>
-
   <footer>
     <p class="footer">&copy; Everton Matias</p>
   </footer>
-
   <script type="module" src="main.js"></script>
 </body>
 
