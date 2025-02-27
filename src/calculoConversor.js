@@ -8,7 +8,7 @@ function verificar() {
     document.querySelector("#segundaEscolha").options[
       document.querySelector("#segundaEscolha").selectedIndex
     ].value;
-  let valor = document.querySelector("#valor").value;
+  let valor = document.getElementById("valor").value;
   let resultado = "";
 
   mesmasEscalas =
@@ -18,29 +18,21 @@ function verificar() {
       : conversao();
 
   function conversao() {
-    if (primeiraEscala == "Celsius") {
-      if (segundaEscala == "Fahrenheit") {
-        resultado = (valor * 9) / 5 + 32;
-      }
-      if (segundaEscala == "Kelvin") {
-        resultado = valor + 273.15;
-      }
-    }
-    if (primeiraEscala == "Fahrenheit") {
-      if (segundaEscala == "Celsius") {
-        resultado = ((valor - 32) * 5) / 9;
-      }
-      if (segundaEscala == "Kelvin") {
-        resultado = ((valor - 32) * 5) / 9 + 273.15;
-      }
-    }
-    if (primeiraEscala == "Kelvin") {
-      if (segundaEscala == "Celsius") {
-        resultado = valor - 273.15;
-      }
-      if (segundaEscala == "Fahrenheit") {
-        resultado = ((valor - 273.15) * 9) / 5 + 32;
-      }
+    if (
+      (primeiraEscala == "Celsius" || segundaEscala == "Celsius") &&
+      (primeiraEscala == "Fahrenheit" || segundaEscala == "Fahrenheit")
+    ) {
+      resultado = (valor * 9) / 5 + 32;
+    } else if (
+      (primeiraEscala == "Celsius" || segundaEscala == "Celsius") &&
+      (primeiraEscala == "Kelvin" || segundaEscala == "Kelvin")
+    ) {
+      resultado = valor * 1 + 273.15;
+    } else if (
+      (primeiraEscala == "Fahrenheit" || segundaEscala == "Fahrenheit") &&
+      (primeiraEscala == "Kelvin" || segundaEscala == "Kelvin")
+    ) {
+      resultado = ((valor - 273.15) * 9) / 5 + 32;
     }
 
     return (
@@ -49,29 +41,8 @@ function verificar() {
   }
 }
 
-export function calculate() {
+export function calcular() {
   const buton = document.getElementById("botaoVerificador");
 
   buton.addEventListener("click", verificar);
 }
-
-// if (
-//   primeiraEscala == "Celsius" ||
-//   (valorEscTransform == "Celsius" && primeiraEscala == "Fahrenheit") ||
-//   valorEscTransform == "Fahrenheit"
-// ) {
-//   valorFinal = (valor * 9) / 5 + 32;
-// } else if (
-//   primeiraEscala == "Celsius" ||
-//   (valorEscTransform == "Celsius" && primeiraEscala == "Kelvin") ||
-//   valorEscTransform == "Kelvin"
-// ) {
-//   valorFinal = valor + 273.15;
-// } else if (
-//   primeiraEscala == "Fahrenheit" ||
-//   (valorEscTransform == "Fahrenheit" && primeiraEscala == "Kelvin") ||
-//   valorEscTransform == "Kelvin"
-// ) {
-//   resposta = ((valor - 32) * 5) / 9 + 273.15;
-// }
-// console.log(resposta);

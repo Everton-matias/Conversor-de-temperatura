@@ -1,5 +1,5 @@
-import { changeTheme } from "./src/bgTheme";
-import { calculate } from "./src/conveterCAlculator";
+import { changeTheme } from "./src/temasDeFundo";
+import { calcular } from "./src/calculoConversor";
 
 changeTheme();
-calculate();
+calcular();
