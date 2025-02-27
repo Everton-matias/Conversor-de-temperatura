@@ -8,8 +8,8 @@ function lightTheme() {
 
 export function changeTheme() {
   const backgroundThemes = [
-    { lightTheme: document.getElementById("light") },
-    { darkTheme: document.getElementById("dark") },
+    { lightTheme: document.getElementById("temaClaro") },
+    { darkTheme: document.getElementById("temaEscuro") },
   ];
 
   backgroundThemes[1].darkTheme.addEventListener("click", darkTheme);
